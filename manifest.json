@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "LeetCodeHider",
+  "description": "It will hide difficuty level on leetcode.",
+  "version": "1.0",
+
+  "browser_action": {
+"default_title": "LeetCodeHider",
+    "default_icon": "chip.png"
+     },
+  "permissions": [
+    "storage","contentSettings"
+	],
+  
+  "content_scripts": [
+    {
+		"matches": ["*://leetcode.com/*"],
+		"js":["jquery-2.2.1.min.js", "leetcode.js"]
+    }
+  ]
+}
